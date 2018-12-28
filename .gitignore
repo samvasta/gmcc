@@ -335,3 +335,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+
+
+# ANTLR4 files
+*.antlr
