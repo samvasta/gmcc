@@ -1,4 +1,5 @@
 using System;
+using Common.Models;
 using MathNet.Numerics.Random;
 
 namespace Engine.Random
@@ -11,7 +12,7 @@ namespace Engine.Random
         /// <param name="numDice"></param>
         /// <param name="diceSides"></param>
         /// <returns></returns>
-        public static int Roll(int numDice, int diceSides)
+        public static DiceResult Roll(int numDice, int diceSides)
         {
             if(numDice <= 0)
             {
@@ -22,12 +23,14 @@ namespace Engine.Random
                 throw new ArgumentOutOfRangeException(nameof(diceSides), diceSides, "must be a positive integer");
             }
 
-            int accumulator = 0;
-            for(int i = 0; i < numDice; i++)
+            System.Diagnostics.Debug.WriteLine($"DiceUtil is rolling {numDice}d{diceSides}");
+
+            DiceResult result = RollOne(diceSides);
+            for(int i = 1; i < numDice; i++)
             {
-                accumulator += RollOne(diceSides);
+                result += RollOne(diceSides);
             }
-            return accumulator;
+            return result;
         }
 
         /// <summary>
@@ -36,20 +39,20 @@ namespace Engine.Random
         /// <param name="advantage">Determines how many dice are rolled. Positive advantage will take the highest value rolled, negative advantage will take the lowest. A value of 0 will be equivalent to calling <see cref="RollOne(diceSides)"/></param>
         /// <param name="diceSides">Number of sides on dice to roll</param>
         /// <returns>A value between 1 (inclusive) and the given number of sides on the dice (inclusive)</returns>
-        public static int RollAdvantage(int advantage, int diceSides)
+        public static DiceResult RollAdvantage(int advantage, int diceSides)
         {
-            int best = (advantage >= 0) ? 1 : diceSides;
+            DiceResult best = RollOne(diceSides);
 
-            for(int i = 0; i < Math.Abs(advantage) + 1; i++)
+            for(int i = 1; i < Math.Abs(advantage) + 1; i++)
             {
-                int value = RollOne(diceSides);
+                DiceResult value = RollOne(diceSides);
                 if(advantage < 0)
                 {
-                    best = Math.Min(best, value);
+                    best = DiceResult.MinTotal(best, value);
                 }
                 else
                 {
-                    best = Math.Max(best, value);
+                    best = DiceResult.MaxTotal(best, value);
                 }
             }
 
@@ -61,9 +64,9 @@ namespace Engine.Random
         /// </summary>
         /// <param name="diceSides">Number of sides on dice to roll</param>
         /// <returns>A value between 1 (inclusive) and the given number of sides on the dice (inclusive)</returns>
-        public static int RollOne(int diceSides)
+        public static DiceResult RollOne(int diceSides)
         {
-            return RandomUtil.Random.Next(1, diceSides+1);
+            return new DiceResult(diceSides, RandomUtil.Random.Next(1, diceSides+1));
         }
     }
 }

@@ -9,6 +9,7 @@ using Engine.Parsers;
 using Engine.Parsers.Grammar;
 using Engine.Parsers.Grammar.Visitors;
 using Engine.Parsers.Generated.Grammar;
+using System.Diagnostics;
 
 namespace EngineTest
 {
@@ -53,5 +54,80 @@ namespace EngineTest
             Assert.Equal(expectedValue, result.Value);
         }
         
+
+        [Theory]
+        [InlineData("d20", 1, 20)]
+        [InlineData("4d20", 4, 80)]
+        [InlineData("!d20", 1, 20)]
+        [InlineData("~d20", 1, 20)]
+        [InlineData("~!!~!~~!!d20", 1, 20)]
+        public void TestRoll(string text, int expectedLow, int expectedHigh)
+        {
+            GrammarParser parser = Setup(text);
+    
+            GrammarParser.StatementsContext context = parser.statements();
+            StatementsVisitor visitor = new StatementsVisitor();
+            GrammarParseResult result = visitor.Visit(context);
+    
+            //Just test it once. These tests are mainly to make sure it parses correctly
+            Assert.True(result.IsSuccessful);
+            Console.WriteLine(result.Output);
+            Assert.InRange(result.Value, expectedLow, expectedHigh);
+        }
+
+        
+        [Theory]
+        [InlineData("d20+d20")]
+        [InlineData("d20+!d20")]
+        [InlineData("d20+!d20")]
+        [InlineData("!d20")]
+        [InlineData("2d3d4d5")]
+        [InlineData("(2+2d4)d5 + 18")]
+        public void TestComplexExpression(string text)
+        {
+            GrammarParser parser = Setup(text);
+    
+            GrammarParser.StatementsContext context = parser.statements();
+            StatementsVisitor visitor = new StatementsVisitor();
+            GrammarParseResult result = visitor.Visit(context);
+    
+            //Just test it once. These tests are mainly to make sure it parses correctly
+            Assert.True(result.IsSuccessful);
+            Console.WriteLine(result.Output);
+            Console.WriteLine(result.Value);
+        }
+
+        
+        [Theory]
+        [InlineData("4 & 5", 2)]
+        [InlineData("5d5+23/3:test & 53-22 & 21", 3)]
+        public void TestMultiStatement(string text, int expectedStatements)
+        {
+            GrammarParser parser = Setup(text);
+    
+            GrammarParser.StatementsContext context = parser.statements();
+            StatementsVisitor visitor = new StatementsVisitor();
+            GrammarParseResult result = visitor.Visit(context);
+    
+            Assert.True(result.IsSuccessful);
+            Assert.Equal(expectedStatements, result.Children.Count);
+        }
+
+        
+        
+        [Fact]
+        public void TestStatementLabel()
+        {
+            string label = "This is a label";
+            string text = $"5d10 + 2 : {label}";
+            GrammarParser parser = Setup(text);
+    
+            GrammarParser.StatementsContext context = parser.statements();
+            StatementsVisitor visitor = new StatementsVisitor();
+            GrammarParseResult result = visitor.Visit(context);
+    
+            Assert.True(result.IsSuccessful);
+            Assert.Equal(label, result.Label);
+        }
     }
 }

@@ -5,7 +5,9 @@ using Antlr4.Runtime;
 using Antlr4.Runtime.Atn;
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
+using Common.Models;
 using Engine.Parsers.Generated.Grammar;
+using Engine.Random;
 using static Engine.Parsers.Generated.Grammar.GrammarParser;
 using static Engine.Parsers.Grammar.GrammarParseResult;
 
@@ -13,15 +15,12 @@ namespace Engine.Parsers.Grammar.Visitors
 {
     public class ExpressionVisitor : GrammarBaseVisitor<GrammarParseResult>
     {
-        protected readonly ValueVisitor _valueVisitor = new ValueVisitor();
-        
-
         public virtual GrammarParseResult VisitExpression(ExpressionContext context)
         {
             Debug.WriteLine($"Determining Type of expression \"{context.GetText()}\"");
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
             if(context is ParenExprContext parenExprContext)
             {
@@ -43,9 +42,17 @@ namespace Engine.Parsers.Grammar.Visitors
             {
                 return VisitUnaryMinusExpr(unaryMinusExprContext);
             }
-            if(context is ValueExprContext valueExprContext)
+            if(context is NumberExprContext numberExprContext)
             {
-                return VisitValueExpr(valueExprContext);
+                return VisitNumberExpr(numberExprContext);
+            }
+            if(context is ModifierRollContext modifierRollContext)
+            {
+                return VisitModifierRoll(modifierRollContext);
+            }
+            if(context is SumRollContext sumRollContext)
+            {
+                return VisitSumRoll(sumRollContext);
             }
             throw new ArgumentException($"No logic defined for expression of this type: {context.GetType().Name}");
         }
@@ -55,7 +62,7 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitPowExpression \"{context.GetText()}\"");
@@ -67,7 +74,7 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitAddExpression \"{context.GetText()}\"");
@@ -79,7 +86,7 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitMulExpression \"{context.GetText()}\"");
@@ -91,7 +98,7 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitUnaryMinusExpression \"{context.GetText()}\"");
@@ -108,7 +115,7 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitParenExpr \"{context.GetText()}\"");
@@ -117,28 +124,97 @@ namespace Engine.Parsers.Grammar.Visitors
         }
 
 
-        public override GrammarParseResult VisitValueExpr(ValueExprContext context)
+        public override GrammarParseResult VisitNumberExpr(NumberExprContext context)
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
-            Debug.WriteLine($"VisitValueExpr \"{context.GetText()}\"");
+            Debug.WriteLine($"VisitNumberExpr \"{context.GetText()}\"");
 
-            return _valueVisitor.VisitValue(context.value());
+            int value = int.Parse(context.GetText());
+
+            return new GrammarParseResult(context.GetText()) { Value = value };
+        }
+
+        public override GrammarParseResult VisitModifierRoll(ModifierRollContext context)
+        {
+            if(context == null)
+            {
+                return GrammarParseResult.Unsuccessful(context.GetText());
+            }
+
+            Debug.WriteLine($"VisitModifierRoll \"{context.GetText()}\"");
+            
+            int numAdvantage = context.ADVANTAGE().Length - context.DISADVANTAGE().Length;
+            GrammarParseResult childDiceSides = VisitExpression(context.expression());
+            childDiceSides.Label = "Dice Sides";
+            int diceSides = childDiceSides.Value;
+
+            GrammarParseResult result = new GrammarParseResult(context.GetText());
+            string advStr;
+            if(numAdvantage == 0)
+            {
+                advStr = String.Empty;
+            }
+            else if(numAdvantage > 0)
+            {
+                advStr = "Highest of ";
+            }
+            else
+            {
+                advStr = "Lowest of ";
+            }
+
+            result.EvaluatedText = $"{advStr}{Math.Abs(numAdvantage)+1}d{diceSides}";
+            result.Children.Add(childDiceSides);
+
+            DiceResult diceResult = DiceUtil.RollAdvantage(numAdvantage, diceSides);
+            result.Value = diceResult.Total;
+            result.Output = String.Join(", ", diceResult.Values);
+
+            return result;
+        }
+
+        public override GrammarParseResult VisitSumRoll(SumRollContext context)
+        {
+            if(context == null)
+            {
+                return GrammarParseResult.Unsuccessful(context.GetText());
+            }
+
+            Debug.WriteLine($"VisitSumRoll \"{context.GetText()}\"");
+            
+            GrammarParseResult childNumDice = VisitExpression(context.num);
+            childNumDice.Label = "# Dice";
+            GrammarParseResult childDiceSides = VisitExpression(context.sides);
+            childDiceSides.Label = "Dice Sides";
+            int numDice = childNumDice.Value;
+            int diceSides = childDiceSides.Value;
+
+            GrammarParseResult result = new GrammarParseResult(context.GetText());
+            result.Children.Add(childNumDice);
+            result.Children.Add(childDiceSides);
+
+            result.EvaluatedText = $"{numDice}d{diceSides}";
+
+            DiceResult diceResult = DiceUtil.Roll(numDice, diceSides);
+            result.Value = diceResult.Total;
+            result.Output = String.Join(", ", diceResult.Values);
+
+            return result;
         }
         
 
         protected GrammarParseResult VisitArithmeticExpr(ExpressionContext lhs, ExpressionContext rhs, IToken op)
         {
             Console.WriteLine($"Visit Arithmetic Expression lhs=\"{lhs.GetText()}\", rhs=\"{lhs.GetText()}\", op=\"{op.Text}\"");
-            GrammarParseResult result = VisitExpression(lhs);
+            GrammarParseResult lhsResult = VisitExpression(lhs);
 
             GrammarParseResult rhsResult = VisitExpression(rhs);
 
-            result.Combine(rhsResult, BoolCombine.And, GetArithCombine(op.Text));
-
-            return result;
+            string resultText = String.Concat(lhs.GetText(), op.Text, rhs.GetText());
+            return GrammarParseResult.Combine(resultText, lhsResult, rhsResult, BoolCombine.And, GetArithCombine(op.Text));
         }
 
         private ArithCombine GetArithCombine(string op)

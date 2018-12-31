@@ -12,25 +12,22 @@ options
 statements                                      : statement (AND statement)* EOF
                                                 ;
 
-statement                                       : expression
-                                                | command
-                                                | action
+statement                                       : expression label?
+                                                | command label?
+                                                | action label?
                                                 ;
 
-expression                                      :<assoc=right> lhs=expression op=POW rhs=expression                 #powExpr
-                                                | SUBTRACT expression                                               #unaryMinusExpr
+label                                           : COLON STRING
+                                                ;
+
+expression                                      : SUBTRACT expression                                               #unaryMinusExpr
+                                                | (ADVANTAGE | DISADVANTAGE)* DICE sides=expression                 #modifierRoll
+                                                | num=expression DICE sides=expression                              #sumRoll
+                                                |<assoc=right> lhs=expression op=POW rhs=expression                 #powExpr
                                                 | lhs=expression op=(MULTIPLY | DIVIDE | MOD) rhs=expression        #multiplicationExpr
                                                 | lhs=expression op=(ADD | SUBTRACT) rhs=expression                 #additiveExpr
-                                                | value                                                             #valueExpr
                                                 | L_PAREN expression R_PAREN                                        #parenExpr
-                                                ;
-
-value                                           : INTEGER                                                           #numberValue
-                                                | roll                                                              #rollValue
-                                                ;
-
-roll                                            : (ADVANTAGE | DISADVANTAGE)* DICE INTEGER                                            #modifierRoll
-                                                | INTEGER DICE INTEGER                                              #sumRoll
+                                                | INTEGER                                                           #numberExpr
                                                 ;
 
 command                                         : COMMAND;
@@ -40,6 +37,11 @@ action                                          : ACTION;
 /*
  * Lexer Rules
  */
+
+COMMAND             : 'command' ;
+ACTION              : 'action' ;
+
+DICE                                            : 'd' ;
 
 ADD                                             : '+' ;
 SUBTRACT                                        : '-' ;
@@ -51,20 +53,20 @@ POW                                             : '^' ;
 
 AND                                             : '&' ;
 
-DICE                                            : 'd' ;
 ADVANTAGE                                       : '!' ;
 DISADVANTAGE                                    : '~' ;
 
-INTEGER                                         : [0-9]+ ;
 
 
 L_PAREN                                         : '(' ;
 R_PAREN                                         : ')' ;
 
+COLON                                           : ':' ;
+
+ALPHA_CHAR                                      : [a-zA-Z] ;
+STRING                                          : ALPHA_CHAR ALPHA_CHAR ALPHA_CHAR ~[\r\n&]* ;
+INTEGER                                         : [0-9]+ ;
+
 
 WHITESPACE          : (' '|'\t')+ -> skip ;
 NEWLINE             : ('\r'? '\n' | '\r')+ ;
-
-COMMAND             : 'command' ;
-
-ACTION              : 'action' ;

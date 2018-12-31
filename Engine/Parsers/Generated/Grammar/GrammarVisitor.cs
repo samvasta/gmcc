@@ -45,12 +45,18 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitStatement([NotNull] GrammarParser.StatementContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>valueExpr</c>
+	/// Visit a parse tree produced by <see cref="GrammarParser.label"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLabel([NotNull] GrammarParser.LabelContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>sumRoll</c>
 	/// labeled alternative in <see cref="GrammarParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitValueExpr([NotNull] GrammarParser.ValueExprContext context);
+	Result VisitSumRoll([NotNull] GrammarParser.SumRollContext context);
 	/// <summary>
 	/// Visit a parse tree produced by the <c>unaryMinusExpr</c>
 	/// labeled alternative in <see cref="GrammarParser.expression"/>.
@@ -58,6 +64,13 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitUnaryMinusExpr([NotNull] GrammarParser.UnaryMinusExprContext context);
+	/// <summary>
+	/// Visit a parse tree produced by the <c>numberExpr</c>
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitNumberExpr([NotNull] GrammarParser.NumberExprContext context);
 	/// <summary>
 	/// Visit a parse tree produced by the <c>multiplicationExpr</c>
 	/// labeled alternative in <see cref="GrammarParser.expression"/>.
@@ -87,33 +100,12 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitParenExpr([NotNull] GrammarParser.ParenExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>numberValue</c>
-	/// labeled alternative in <see cref="GrammarParser.value"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitNumberValue([NotNull] GrammarParser.NumberValueContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>rollValue</c>
-	/// labeled alternative in <see cref="GrammarParser.value"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitRollValue([NotNull] GrammarParser.RollValueContext context);
-	/// <summary>
 	/// Visit a parse tree produced by the <c>modifierRoll</c>
-	/// labeled alternative in <see cref="GrammarParser.roll"/>.
+	/// labeled alternative in <see cref="GrammarParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitModifierRoll([NotNull] GrammarParser.ModifierRollContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>sumRoll</c>
-	/// labeled alternative in <see cref="GrammarParser.roll"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitSumRoll([NotNull] GrammarParser.SumRollContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.command"/>.
 	/// </summary>

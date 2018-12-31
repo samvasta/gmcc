@@ -17,11 +17,11 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Console.WriteLine($"VisitAction \"{context.GetText()}\"");
-            return GrammarParseResult.UNSUCCESSFUL;
+            return GrammarParseResult.Unsuccessful(context.GetText());
         }
     }
 }

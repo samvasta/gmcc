@@ -19,17 +19,22 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitStatements \"{context.GetText()}\"");
 
-            //Only successful if all statements are successful
-            GrammarParseResult result = new GrammarParseResult();
+            StatementContext[] statements = context.statement();
 
-            foreach(StatementContext ctx in context.statement())
+            if(statements.Length == 1)
             {
-                result.Combine(VisitStatement(ctx), isSuccessfulCombine: BoolCombine.And);
+                return VisitStatement(statements[0]);
+            }
+
+            GrammarParseResult result = new GrammarParseResult(context.GetText());
+            foreach(StatementContext ctx in statements)
+            {
+                result.Children.Add(VisitStatement(ctx));
             }
 
             return result;
@@ -39,29 +44,36 @@ namespace Engine.Parsers.Grammar.Visitors
         {
             if(context == null)
             {
-                return GrammarParseResult.UNSUCCESSFUL;
+                return GrammarParseResult.Unsuccessful(context.GetText());
             }
 
             Debug.WriteLine($"VisitStatement \"{context.GetText()}\"");
+            
+            string labelStr = context.label()?.STRING()?.GetText();
 
             //Successful if any of the 3 possible productions are successful
             GrammarParseResult result = _expressionVisitor.VisitExpression(context.expression());
             if(result.IsSuccessful)
             {
+                result.Label = labelStr;
                 return result;
             }
+            
             result = VisitCommand(context.command());
             if(result.IsSuccessful)
             {
+                result.Label = labelStr;
                 return result;
             }
+            
             result = VisitAction(context.action());
             if(result.IsSuccessful)
             {
+                result.Label = labelStr;
                 return result;
             }
 
-            return GrammarParseResult.UNSUCCESSFUL;
+            return GrammarParseResult.Unsuccessful(context.GetText());
         }
     }
 }

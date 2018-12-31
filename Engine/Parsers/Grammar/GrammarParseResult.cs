@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Engine.Parsers.Grammar
 {
@@ -26,86 +27,114 @@ namespace Engine.Parsers.Grammar
             Ignore = -1,
             Append = 0,
             Prepend = 1,
-            Overwrite = 2,
+            LeftOnly = 2,
+            RightOnly = 3
         }
 
-        public static readonly GrammarParseResult UNSUCCESSFUL = new GrammarParseResult() { IsSuccessful = false, Value = -1, Output = "Operation failed" };
+        public static GrammarParseResult Unsuccessful(string rawText)
+        {
+            return new GrammarParseResult(String.Empty) { RawText = rawText, IsSuccessful = false, Value = -1, Output = "Operation failed" };
+        }
 
+
+        public string Label { get; set; } = String.Empty;
+        public string EvaluatedText { get; set; } = String.Empty;
+        public string RawText { get; set; } = String.Empty;
         public bool IsSuccessful { get; set; } = true;
 
         public int Value { get; set; } = 0;
 
         public string Output { get; set; } = String.Empty;
 
-        public void Combine(GrammarParseResult result, BoolCombine isSuccessfulCombine = BoolCombine.Or, ArithCombine valueCombine = ArithCombine.Add, StrCombine outputCombine = StrCombine.Append)
+        public List<GrammarParseResult> Children { get; }
+
+        public GrammarParseResult(string rawText)
         {
-            CombineSuccessful(result.IsSuccessful, isSuccessfulCombine);
-            CombineValue(result.Value, valueCombine);
-            CombineOutput(result.Output, outputCombine);
+            RawText = rawText;
+            Children = new List<GrammarParseResult>();
+        }
+        public GrammarParseResult(string rawText, params GrammarParseResult[] children)
+            : this(rawText)
+        {
+            Children = new List<GrammarParseResult>(children);
         }
 
-        private void CombineOutput(string otherOutput, StrCombine combine)
+
+        public static GrammarParseResult Combine(string rawText, GrammarParseResult x, GrammarParseResult y, BoolCombine isSuccessfulCombine = BoolCombine.Or, ArithCombine valueCombine = ArithCombine.Add, StrCombine outputCombine = StrCombine.Ignore)
+        {
+            GrammarParseResult combined = new GrammarParseResult(rawText);
+            combined.IsSuccessful = CombineSuccessful(x.IsSuccessful, y.IsSuccessful, isSuccessfulCombine);
+            combined.Value = CombineValue(x.Value, y.Value, valueCombine);
+            combined.Output = CombineOutput(x.Output, y.Output, outputCombine);
+
+            combined.Children.Add(x);
+            combined.Children.Add(y);
+
+            return combined;
+        }
+
+        private static string CombineOutput(string outputX, string outputY, StrCombine combine)
         {
             switch(combine)
             {
                 case StrCombine.Ignore:
-                    //Do nothing
-                    break;
+                    return String.Empty;
+
                 case StrCombine.Append:
-                    Output += Environment.NewLine + otherOutput;
-                    break;
+                return String.Concat(outputX, Environment.NewLine, outputY);
+
                 case StrCombine.Prepend:
-                    Output = otherOutput + Environment.NewLine + Output;
-                    break;
-                case StrCombine.Overwrite:
-                    Output = otherOutput;
-                    break;
+                    return String.Concat(outputY, Environment.NewLine, outputX);
+
+                case StrCombine.LeftOnly:
+                    return outputX;
+
+                case StrCombine.RightOnly:
+                    return outputY;
+
                 default:
                     throw new ArgumentException($"No combine logic defined for combine type: {Enum.GetName(typeof(StrCombine), combine)}");
             }
-            Output = Output.Trim();
         }
 
-        private void CombineValue(int otherValue, ArithCombine combine)
+        private static int CombineValue(int valueX, int valueY, ArithCombine combine)
         {
             switch(combine)
             {
                 case ArithCombine.Ignore:
                     //Do nothing
-                    return;
+                    return 0;
                 case ArithCombine.Add:
-                    Value += otherValue;
-                    return;
+                    return valueX + valueY;
+
                 case ArithCombine.Subtract:
-                    Value -= otherValue;
-                    return;
+                    return valueX - valueY;
+
                 case ArithCombine.Multiply:
-                    Value *= otherValue;
-                    return;
+                    return valueX * valueY;
+
                 case ArithCombine.Divide:
-                    Value /= otherValue;
-                    return;
+                    return valueX / valueY;
+
                 case ArithCombine.Pow:
-                    Value = (int)Math.Pow(Value, otherValue);
-                    return;
+                    return (int)Math.Pow(valueX, valueY);
+
                 case ArithCombine.Modulus:
-                    Value = Value % otherValue;
-                    return;
+                    return valueX % valueY;
+
                 default:
                     throw new ArgumentException($"No combine logic defined for combine type: {Enum.GetName(typeof(ArithCombine), combine)}");
             }
         }
 
-        private void CombineSuccessful(bool otherIsSuccessful, BoolCombine combine)
+        private static bool CombineSuccessful(bool isSuccessfulX, bool isSuccessfulY, BoolCombine combine)
         {
             switch(combine)
             {
                 case BoolCombine.Or:
-                    IsSuccessful |= otherIsSuccessful;
-                    return;
+                    return isSuccessfulX || isSuccessfulY;
                 case BoolCombine.And:
-                    IsSuccessful &= otherIsSuccessful;
-                    return;
+                    return isSuccessfulX && isSuccessfulY;
                 default:
                     throw new ArgumentException($"No combine logic defined for combine type: {Enum.GetName(typeof(BoolCombine), combine)}");
             }
