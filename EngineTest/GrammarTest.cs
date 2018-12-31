@@ -7,6 +7,7 @@ using Antlr4.Runtime.Misc;
 using Engine;
 using Engine.Parsers;
 using Engine.Parsers.Grammar;
+using Engine.Parsers.Grammar.Visitors;
 using Engine.Parsers.Generated.Grammar;
 
 namespace EngineTest
@@ -20,7 +21,7 @@ namespace EngineTest
             CommonTokenStream commonTokenStream = new CommonTokenStream(grammarLexer);
             GrammarParser grammarParser = new GrammarParser(commonTokenStream);
     
-            return grammarParser;   
+            return grammarParser;
         }
         
         [Theory]
@@ -44,7 +45,7 @@ namespace EngineTest
             GrammarParser parser = Setup(text);
     
             GrammarParser.StatementsContext context = parser.statements();
-            GrammarVisitor visitor = new GrammarVisitor();
+            StatementsVisitor visitor = new StatementsVisitor();
             GrammarParseResult result = visitor.Visit(context);
     
             Assert.True(result.IsSuccessful);

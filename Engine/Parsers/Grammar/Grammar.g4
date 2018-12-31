@@ -29,14 +29,9 @@ value                                           : INTEGER                       
                                                 | roll                                                              #rollValue
                                                 ;
 
-roll                                            : modifier* DICE INTEGER
-                                                | INTEGER DICE INTEGER
+roll                                            : (ADVANTAGE | DISADVANTAGE)* DICE INTEGER                                            #modifierRoll
+                                                | INTEGER DICE INTEGER                                              #sumRoll
                                                 ;
-
-modifier                                        : ADVANTAGE
-                                                | DISADVANTAGE
-                                                ;
-
 
 command                                         : COMMAND;
 action                                          : ACTION;

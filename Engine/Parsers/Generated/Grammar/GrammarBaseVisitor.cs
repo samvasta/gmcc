@@ -143,7 +143,8 @@ public partial class GrammarBaseVisitor<Result> : AbstractParseTreeVisitor<Resul
 	/// <return>The visitor result.</return>
 	public virtual Result VisitRollValue([NotNull] GrammarParser.RollValueContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.roll"/>.
+	/// Visit a parse tree produced by the <c>modifierRoll</c>
+	/// labeled alternative in <see cref="GrammarParser.roll"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -151,9 +152,10 @@ public partial class GrammarBaseVisitor<Result> : AbstractParseTreeVisitor<Resul
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitRoll([NotNull] GrammarParser.RollContext context) { return VisitChildren(context); }
+	public virtual Result VisitModifierRoll([NotNull] GrammarParser.ModifierRollContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.modifier"/>.
+	/// Visit a parse tree produced by the <c>sumRoll</c>
+	/// labeled alternative in <see cref="GrammarParser.roll"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -161,7 +163,7 @@ public partial class GrammarBaseVisitor<Result> : AbstractParseTreeVisitor<Resul
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitModifier([NotNull] GrammarParser.ModifierContext context) { return VisitChildren(context); }
+	public virtual Result VisitSumRoll([NotNull] GrammarParser.SumRollContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.command"/>.
 	/// <para>

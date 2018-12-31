@@ -101,17 +101,19 @@ public interface IGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitRollValue([NotNull] GrammarParser.RollValueContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.roll"/>.
+	/// Visit a parse tree produced by the <c>modifierRoll</c>
+	/// labeled alternative in <see cref="GrammarParser.roll"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitRoll([NotNull] GrammarParser.RollContext context);
+	Result VisitModifierRoll([NotNull] GrammarParser.ModifierRollContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="GrammarParser.modifier"/>.
+	/// Visit a parse tree produced by the <c>sumRoll</c>
+	/// labeled alternative in <see cref="GrammarParser.roll"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitModifier([NotNull] GrammarParser.ModifierContext context);
+	Result VisitSumRoll([NotNull] GrammarParser.SumRollContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="GrammarParser.command"/>.
 	/// </summary>

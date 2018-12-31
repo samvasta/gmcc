@@ -173,292 +173,362 @@ BRH:11
 FNF:8
 FNH:7
 end_of_record
-SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\GrammarVisitor.cs
-FN:16,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitStatements(Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext)
-FNDA:15,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitStatements(Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext)
-DA:17,15
-DA:18,15
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\ActionVisitor.cs
+FN:16,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ActionVisitor::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ActionVisitor::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
+DA:17,0
+DA:18,0
 DA:19,0
 DA:20,0
-DA:23,15
-DA:26,15
-DA:28,75
-DA:29,15
-DA:30,15
-DA:31,15
-DA:33,15
-DA:34,15
+DA:23,0
+DA:24,0
+DA:25,0
 BRDA:18,7,0,0
-BRDA:18,7,1,15
-BRDA:28,101,1,15
-BRDA:28,101,0,15
-FN:36,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitStatement(Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext)
-FNDA:15,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitStatement(Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext)
-DA:37,15
-DA:38,15
+BRDA:18,7,1,0
+LF:7
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\CommandVisitor.cs
+FN:16,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.CommandVisitor::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.CommandVisitor::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:23,0
+DA:24,0
+DA:25,0
+BRDA:18,7,0,0
+BRDA:18,7,1,0
+LF:7
+LH:0
+BRF:2
+BRH:0
+FNF:1
+FNH:0
+end_of_record
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\ExpressionVisitor.cs
+FN:19,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitExpression(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+FNDA:80,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitExpression(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+DA:20,80
+DA:21,80
+DA:22,80
+DA:23,0
+DA:24,0
+DA:26,80
+DA:27,5
+DA:28,5
+DA:30,75
+DA:31,5
+DA:32,5
+DA:34,70
+DA:35,11
+DA:36,11
+DA:38,59
+DA:39,14
+DA:40,14
+DA:42,45
+DA:43,3
+DA:44,3
+DA:46,42
+DA:47,42
+DA:48,42
+DA:50,0
+DA:51,80
+BRDA:22,36,0,0
+BRDA:22,36,1,80
+BRDA:26,66,0,5
+BRDA:26,66,1,75
+BRDA:30,103,0,5
+BRDA:30,103,1,70
+BRDA:34,135,0,11
+BRDA:34,135,1,59
+BRDA:38,164,0,14
+BRDA:38,164,1,45
+BRDA:42,194,0,3
+BRDA:42,194,1,42
+BRDA:46,225,0,42
+BRDA:46,225,1,0
+FN:54,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitPowExpr(Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext)
+FNDA:5,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitPowExpr(Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext)
+DA:55,5
+DA:56,5
+DA:57,0
+DA:58,0
+DA:61,5
+DA:63,5
+DA:64,5
+BRDA:56,7,0,0
+BRDA:56,7,1,5
+FN:66,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitAdditiveExpr(Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext)
+FNDA:11,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitAdditiveExpr(Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext)
+DA:67,11
+DA:68,11
+DA:69,0
+DA:70,0
+DA:73,11
+DA:75,11
+DA:76,11
+BRDA:68,7,0,0
+BRDA:68,7,1,11
+FN:78,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitMultiplicationExpr(Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext)
+FNDA:14,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitMultiplicationExpr(Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext)
+DA:79,14
+DA:80,14
+DA:81,0
+DA:82,0
+DA:85,14
+DA:87,14
+DA:88,14
+BRDA:80,7,0,0
+BRDA:80,7,1,14
+FN:90,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitUnaryMinusExpr(Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext)
+FNDA:3,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitUnaryMinusExpr(Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext)
+DA:91,3
+DA:92,3
+DA:93,0
+DA:94,0
+DA:97,3
+DA:99,3
+DA:100,3
+DA:102,3
+DA:104,3
+DA:105,3
+BRDA:92,7,0,0
+BRDA:92,7,1,3
+FN:107,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitParenExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitParenExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext)
+DA:108,0
+DA:109,0
+DA:110,0
+DA:111,0
+DA:114,0
+DA:116,0
+DA:117,0
+BRDA:109,7,0,0
+BRDA:109,7,1,0
+FN:120,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitValueExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext)
+FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitValueExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext)
+DA:121,45
+DA:122,45
+DA:123,0
+DA:124,0
+DA:126,45
+DA:128,45
+DA:129,45
+BRDA:122,7,0,0
+BRDA:122,7,1,45
+FN:132,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitArithmeticExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Antlr4.Runtime.IToken)
+FNDA:30,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ExpressionVisitor::VisitArithmeticExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Antlr4.Runtime.IToken)
+DA:133,30
+DA:134,30
+DA:135,30
+DA:137,30
+DA:139,30
+DA:141,30
+DA:142,30
+FN:144,Engine.Parsers.Grammar.GrammarParseResult/ArithCombine Engine.Parsers.Grammar.Visitors.ExpressionVisitor::GetArithCombine(System.String)
+FNDA:30,Engine.Parsers.Grammar.GrammarParseResult/ArithCombine Engine.Parsers.Grammar.Visitors.ExpressionVisitor::GetArithCombine(System.String)
+DA:145,30
+DA:146,30
+DA:149,6
+DA:151,5
+DA:153,6
+DA:155,6
+DA:157,5
+DA:159,2
+DA:162,0
+DA:164,0
+DA:165,30
+BRDA:146,14,0,24
+BRDA:146,27,0,19
+BRDA:146,40,0,13
+BRDA:146,53,0,7
+BRDA:146,66,0,2
+BRDA:146,14,1,6
+BRDA:146,27,1,5
+BRDA:146,40,1,6
+BRDA:146,53,1,6
+BRDA:146,66,1,5
+BRDA:146,79,1,2
+BRDA:146,79,0,0
+FN:15,System.Void Engine.Parsers.Grammar.Visitors.ExpressionVisitor::.ctor()
+FNDA:15,System.Void Engine.Parsers.Grammar.Visitors.ExpressionVisitor::.ctor()
+DA:16,15
+LF:89
+LH:67
+BRF:38
+BRH:28
+FNF:10
+FNH:9
+end_of_record
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\RollVisitor.cs
+FN:16,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+DA:17,0
+DA:18,0
+DA:19,0
+DA:20,0
+DA:22,0
+DA:24,0
+DA:25,0
+DA:26,0
+DA:28,0
+DA:29,0
+DA:30,0
+DA:32,0
+DA:33,0
+BRDA:18,7,0,0
+BRDA:18,7,1,0
+BRDA:24,60,0,0
+BRDA:24,60,1,0
+BRDA:28,88,0,0
+BRDA:28,88,1,0
+FN:35,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitModifierRoll(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitModifierRoll(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext)
+DA:36,0
+DA:37,0
+DA:38,0
 DA:39,0
-DA:40,0
-DA:43,15
-DA:46,15
-DA:47,15
+DA:42,0
+DA:43,0
+DA:44,0
+BRDA:37,7,0,0
+BRDA:37,7,1,0
+FN:46,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitSumRoll(Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.RollVisitor::VisitSumRoll(Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext)
+DA:47,0
+DA:48,0
+DA:49,0
+DA:50,0
+DA:53,0
+DA:54,0
+DA:55,0
+BRDA:48,7,0,0
+BRDA:48,7,1,0
+LF:27
+LH:0
+BRF:10
+BRH:0
+FNF:3
+FNH:0
+end_of_record
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\StatementsVisitor.cs
+FN:18,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.StatementsVisitor::VisitStatements(Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext)
+FNDA:15,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.StatementsVisitor::VisitStatements(Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext)
+DA:19,15
+DA:20,15
+DA:21,0
+DA:22,0
+DA:25,15
+DA:28,15
+DA:30,75
+DA:31,15
+DA:32,15
+DA:33,15
+DA:35,15
+DA:36,15
+BRDA:20,7,0,0
+BRDA:20,7,1,15
+BRDA:30,101,1,15
+BRDA:30,101,0,15
+FN:38,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.StatementsVisitor::VisitStatement(Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext)
+FNDA:15,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.StatementsVisitor::VisitStatement(Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext)
+DA:39,15
+DA:40,15
+DA:41,0
+DA:42,0
+DA:45,15
 DA:48,15
 DA:49,15
-DA:51,0
+DA:50,15
+DA:51,15
+DA:53,0
+DA:54,0
+DA:55,0
+DA:56,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+DA:64,0
+DA:65,15
+BRDA:40,7,0,0
+BRDA:40,7,1,15
+BRDA:49,74,0,15
+BRDA:49,74,1,0
+BRDA:54,104,0,0
+BRDA:54,104,1,0
+BRDA:59,134,0,0
+BRDA:59,134,1,0
+FN:15,System.Void Engine.Parsers.Grammar.Visitors.StatementsVisitor::.ctor()
+FNDA:15,System.Void Engine.Parsers.Grammar.Visitors.StatementsVisitor::.ctor()
+DA:16,15
+LF:32
+LH:19
+BRF:12
+BRH:5
+FNF:3
+FNH:3
+end_of_record
+SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Grammar\Visitors\ValueVisitor.cs
+FN:19,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitValue(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitValue(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+DA:20,45
+DA:21,45
+DA:22,0
+DA:23,0
+DA:25,45
+DA:27,45
+DA:28,45
+DA:29,45
+DA:31,0
+DA:32,0
+DA:33,0
+DA:35,0
+DA:36,45
+BRDA:21,7,0,0
+BRDA:21,7,1,45
+BRDA:27,60,0,45
+BRDA:27,60,1,0
+BRDA:31,88,0,0
+BRDA:31,88,1,0
+FN:38,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitNumberValue(Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext)
+FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitNumberValue(Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext)
+DA:39,45
+DA:40,45
+DA:41,0
+DA:42,0
+DA:45,45
+DA:46,45
+DA:48,45
+DA:49,45
+BRDA:40,7,0,0
+BRDA:40,7,1,45
+FN:51,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
+FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.Visitors.ValueVisitor::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
 DA:52,0
 DA:53,0
 DA:54,0
-DA:56,0
+DA:55,0
 DA:57,0
-DA:58,0
 DA:59,0
-DA:62,0
-DA:63,15
-BRDA:38,7,0,0
-BRDA:38,7,1,15
-BRDA:47,66,0,15
-BRDA:47,66,1,0
-BRDA:52,96,0,0
-BRDA:52,96,1,0
-BRDA:57,126,0,0
-BRDA:57,126,1,0
-FN:65,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitExpression(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-FNDA:80,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitExpression(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:66,80
-DA:67,80
-DA:68,80
-DA:69,0
-DA:70,0
-DA:72,80
-DA:73,5
-DA:74,5
-DA:76,75
-DA:77,5
-DA:78,5
-DA:80,70
-DA:81,11
-DA:82,11
-DA:84,59
-DA:85,14
-DA:86,14
-DA:88,45
-DA:89,3
-DA:90,3
-DA:92,42
-DA:93,42
-DA:94,42
-DA:96,0
-DA:98,80
-BRDA:68,36,0,0
-BRDA:68,36,1,80
-BRDA:72,66,0,5
-BRDA:72,66,1,75
-BRDA:76,103,0,5
-BRDA:76,103,1,70
-BRDA:80,135,0,11
-BRDA:80,135,1,59
-BRDA:84,164,0,14
-BRDA:84,164,1,45
-BRDA:88,194,0,3
-BRDA:88,194,1,42
-BRDA:92,225,0,42
-BRDA:92,225,1,0
-FN:100,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitPowExpr(Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext)
-FNDA:5,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitPowExpr(Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext)
-DA:101,5
-DA:102,5
-DA:103,0
-DA:104,0
-DA:107,5
-DA:109,5
-DA:110,5
-BRDA:102,7,0,0
-BRDA:102,7,1,5
-FN:112,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitAdditiveExpr(Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext)
-FNDA:11,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitAdditiveExpr(Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext)
-DA:113,11
-DA:114,11
-DA:115,0
-DA:116,0
-DA:119,11
-DA:121,11
-DA:122,11
-BRDA:114,7,0,0
-BRDA:114,7,1,11
-FN:124,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitMultiplicationExpr(Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext)
-FNDA:14,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitMultiplicationExpr(Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext)
-DA:125,14
-DA:126,14
-DA:127,0
-DA:128,0
-DA:131,14
-DA:133,14
-DA:134,14
-BRDA:126,7,0,0
-BRDA:126,7,1,14
-FN:136,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitUnaryMinusExpr(Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext)
-FNDA:3,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitUnaryMinusExpr(Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext)
-DA:137,3
-DA:138,3
-DA:139,0
-DA:140,0
-DA:143,3
-DA:145,3
-DA:146,3
-DA:148,3
-DA:150,3
-DA:151,3
-BRDA:138,7,0,0
-BRDA:138,7,1,3
-FN:155,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitArithmeticExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Antlr4.Runtime.IToken)
-FNDA:30,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitArithmeticExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,Antlr4.Runtime.IToken)
-DA:156,30
-DA:157,30
-DA:158,30
-DA:160,30
-DA:162,30
-DA:164,30
-DA:165,30
-FN:167,Engine.Parsers.Grammar.GrammarParseResult/ArithCombine Engine.Parsers.Grammar.GrammarVisitor::GetArithCombine(System.String)
-FNDA:30,Engine.Parsers.Grammar.GrammarParseResult/ArithCombine Engine.Parsers.Grammar.GrammarVisitor::GetArithCombine(System.String)
-DA:168,30
-DA:169,30
-DA:172,6
-DA:174,5
-DA:176,6
-DA:178,6
-DA:180,5
-DA:182,2
-DA:185,0
-DA:187,0
-DA:188,30
-BRDA:169,14,0,24
-BRDA:169,27,0,19
-BRDA:169,40,0,13
-BRDA:169,53,0,7
-BRDA:169,66,0,2
-BRDA:169,14,1,6
-BRDA:169,27,1,5
-BRDA:169,40,1,6
-BRDA:169,53,1,6
-BRDA:169,66,1,5
-BRDA:169,79,1,2
-BRDA:169,79,0,0
-FN:190,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitValueExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext)
-FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitValueExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext)
-DA:191,45
-DA:192,45
-DA:193,0
-DA:194,0
-DA:196,45
-DA:198,45
-DA:199,45
-BRDA:192,7,0,0
-BRDA:192,7,1,45
-FN:201,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitValue(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
-FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitValue(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
-DA:202,45
-DA:203,45
-DA:204,0
-DA:205,0
-DA:207,45
-DA:209,45
-DA:210,45
-DA:211,45
-DA:213,0
-DA:214,0
-DA:215,0
-DA:217,0
-DA:218,45
-BRDA:203,7,0,0
-BRDA:203,7,1,45
-BRDA:209,60,0,45
-BRDA:209,60,1,0
-BRDA:213,88,0,0
-BRDA:213,88,1,0
-FN:220,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitNumberValue(Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext)
-FNDA:45,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitNumberValue(Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext)
-DA:221,45
-DA:222,45
-DA:223,0
-DA:224,0
-DA:227,45
-DA:228,45
-DA:230,45
-DA:231,45
-BRDA:222,7,0,0
-BRDA:222,7,1,45
-FN:233,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitParenExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitParenExpr(Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext)
-DA:234,0
-DA:235,0
-DA:236,0
-DA:237,0
-DA:240,0
-DA:242,0
-DA:243,0
-BRDA:235,7,0,0
-BRDA:235,7,1,0
-FN:245,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
-DA:246,0
-DA:247,0
-DA:248,0
-DA:249,0
-DA:251,0
-DA:253,0
-DA:254,0
-BRDA:247,7,0,0
-BRDA:247,7,1,0
-FN:256,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
-DA:257,0
-DA:258,0
-DA:259,0
-DA:260,0
-DA:263,0
-DA:264,0
-DA:265,0
-BRDA:258,7,0,0
-BRDA:258,7,1,0
-FN:267,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitModifier(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitModifier(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext)
-DA:268,0
-DA:269,0
-DA:270,0
-DA:271,0
-DA:274,0
-DA:275,0
-DA:276,0
-BRDA:269,7,0,0
-BRDA:269,7,1,0
-FN:278,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
-DA:279,0
-DA:280,0
-DA:281,0
-DA:282,0
-DA:285,0
-DA:286,0
-DA:287,0
-BRDA:280,7,0,0
-BRDA:280,7,1,0
-FN:289,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
-FNDA:0,Engine.Parsers.Grammar.GrammarParseResult Engine.Parsers.Grammar.GrammarVisitor::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
-DA:290,0
-DA:291,0
-DA:292,0
-DA:293,0
-DA:296,0
-DA:297,0
-DA:298,0
-BRDA:291,7,0,0
-BRDA:291,7,1,0
-LF:175
-LH:97
-BRF:68
-BRH:36
-FNF:18
-FNH:12
+DA:60,0
+BRDA:53,7,0,0
+BRDA:53,7,1,0
+FN:15,System.Void Engine.Parsers.Grammar.Visitors.ValueVisitor::.ctor()
+FNDA:15,System.Void Engine.Parsers.Grammar.Visitors.ValueVisitor::.ctor()
+DA:16,15
+LF:29
+LH:14
+BRF:10
+BRH:3
+FNF:4
+FNH:3
 end_of_record
 SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Generated\Grammar\GrammarBaseVisitor.cs
 FN:45,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitStatements(Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext)
@@ -491,18 +561,18 @@ DA:133,0
 FN:143,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
 FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitRollValue(Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext)
 DA:144,0
-FN:153,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
-FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitRoll(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
-DA:154,0
-FN:163,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitModifier(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext)
-FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitModifier(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext)
-DA:164,0
-FN:173,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
+FN:154,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitModifierRoll(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext)
+FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitModifierRoll(Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext)
+DA:155,0
+FN:165,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitSumRoll(Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext)
+FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitSumRoll(Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext)
+DA:166,0
+FN:175,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
 FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitCommand(Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext)
-DA:174,0
-FN:183,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
+DA:176,0
+FN:185,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
 FNDA:0,Result Engine.Parsers.Generated.Grammar.GrammarBaseVisitor`1::VisitAction(Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext)
-DA:184,0
+DA:186,0
 LF:14
 LH:0
 BRF:0
@@ -664,33 +734,34 @@ FNF:9
 FNH:3
 end_of_record
 SF:C:\Users\Sam\Documents\Visual Studio 2017\Projects\gmcc\Engine\Parsers\Generated\Grammar\GrammarParser.cs
-FN:65,Antlr4.Runtime.IVocabulary Engine.Parsers.Generated.Grammar.GrammarParser::get_Vocabulary()
+FN:64,Antlr4.Runtime.IVocabulary Engine.Parsers.Generated.Grammar.GrammarParser::get_Vocabulary()
 FNDA:0,Antlr4.Runtime.IVocabulary Engine.Parsers.Generated.Grammar.GrammarParser::get_Vocabulary()
+DA:65,0
 DA:66,0
 DA:67,0
-DA:68,0
-FN:70,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_GrammarFileName()
+FN:69,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_GrammarFileName()
 FNDA:0,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_GrammarFileName()
-DA:71,0
-FN:72,System.String[] Engine.Parsers.Generated.Grammar.GrammarParser::get_RuleNames()
+DA:70,0
+FN:71,System.String[] Engine.Parsers.Generated.Grammar.GrammarParser::get_RuleNames()
 FNDA:0,System.String[] Engine.Parsers.Generated.Grammar.GrammarParser::get_RuleNames()
-DA:73,0
-FN:74,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_SerializedAtn()
+DA:72,0
+FN:73,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_SerializedAtn()
 FNDA:0,System.String Engine.Parsers.Generated.Grammar.GrammarParser::get_SerializedAtn()
-DA:75,0
-FN:116,Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext Engine.Parsers.Generated.Grammar.GrammarParser::statements()
+DA:74,0
+FN:115,Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext Engine.Parsers.Generated.Grammar.GrammarParser::statements()
 FNDA:15,Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext Engine.Parsers.Generated.Grammar.GrammarParser::statements()
+DA:116,15
 DA:117,15
 DA:118,15
-DA:119,15
+DA:120,15
 DA:121,15
 DA:122,15
-DA:123,15
-DA:124,30
+DA:123,30
+DA:124,15
 DA:125,15
 DA:126,15
 DA:127,15
-DA:128,15
+DA:128,0
 DA:129,0
 DA:130,0
 DA:131,0
@@ -700,136 +771,136 @@ DA:134,0
 DA:135,0
 DA:136,0
 DA:137,0
-DA:138,0
-DA:139,30
+DA:138,30
+DA:139,15
 DA:140,15
-DA:141,15
+DA:141,0
 DA:142,0
 DA:143,0
 DA:144,0
 DA:145,0
-DA:146,0
+DA:146,15
 DA:147,15
 DA:148,15
 DA:149,15
 DA:150,15
-DA:151,15
-BRDA:128,173,1,0
-BRDA:128,173,0,15
-FN:175,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser::statement()
+BRDA:127,173,1,0
+BRDA:127,173,0,15
+FN:174,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser::statement()
 FNDA:15,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser::statement()
+DA:175,15
 DA:176,15
 DA:177,15
 DA:178,15
 DA:179,15
 DA:180,15
 DA:181,15
-DA:182,15
+DA:188,15
 DA:189,15
-DA:190,15
-DA:191,30
+DA:190,30
+DA:191,15
 DA:192,15
-DA:193,15
+DA:194,0
 DA:195,0
 DA:196,0
 DA:197,0
 DA:198,0
-DA:199,0
+DA:200,0
 DA:201,0
 DA:202,0
 DA:203,0
 DA:204,0
-DA:205,0
-DA:207,0
-DA:209,15
+DA:206,0
+DA:208,15
+DA:209,0
 DA:210,0
 DA:211,0
 DA:212,0
 DA:213,0
-DA:214,0
+DA:214,15
 DA:215,15
 DA:216,15
 DA:217,15
 DA:218,15
-DA:219,15
-BRDA:182,68,0,15
-BRDA:182,72,0,13
-BRDA:182,68,1,0
-BRDA:182,87,0,0
-BRDA:182,72,1,15
-BRDA:182,80,1,15
-BRDA:182,87,1,0
-BRDA:182,94,1,0
-BRDA:182,80,0,0
-BRDA:182,94,0,0
-FN:327,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression()
+BRDA:181,68,0,15
+BRDA:181,72,0,13
+BRDA:181,68,1,0
+BRDA:181,87,0,0
+BRDA:181,72,1,15
+BRDA:181,80,1,15
+BRDA:181,87,1,0
+BRDA:181,94,1,0
+BRDA:181,80,0,0
+BRDA:181,94,0,0
+FN:326,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression()
+DA:327,0
 DA:328,0
 DA:329,0
-DA:330,0
-FN:331,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression(System.Int32)
+FN:330,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression(System.Int32)
 FNDA:53,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser::expression(System.Int32)
+DA:331,53
 DA:332,53
 DA:333,53
 DA:334,53
 DA:335,53
 DA:336,53
 DA:337,53
-DA:338,53
-DA:340,53
+DA:339,53
+DA:341,53
 DA:342,53
 DA:343,53
 DA:344,53
 DA:345,53
-DA:346,53
+DA:347,3
 DA:348,3
 DA:349,3
 DA:350,3
-DA:351,3
+DA:352,6
 DA:353,6
-DA:354,6
+DA:354,3
 DA:355,3
-DA:356,3
+DA:360,45
 DA:361,45
 DA:362,45
 DA:363,45
-DA:364,45
-DA:365,90
+DA:364,90
+DA:365,45
 DA:366,45
-DA:367,45
+DA:368,5
 DA:369,5
 DA:370,5
 DA:371,5
-DA:372,5
+DA:372,10
 DA:373,10
 DA:374,10
-DA:375,10
+DA:375,5
 DA:376,5
-DA:377,5
-DA:379,0
+DA:378,0
+DA:380,53
 DA:381,53
 DA:382,53
 DA:383,53
-DA:384,53
-DA:385,113
-DA:386,60
+DA:384,113
+DA:385,60
+DA:386,30
 DA:387,30
 DA:388,30
 DA:389,30
 DA:390,30
 DA:391,30
 DA:392,30
-DA:393,30
+DA:394,5
 DA:395,5
 DA:396,5
 DA:397,5
 DA:398,5
 DA:399,5
-DA:400,5
+DA:400,10
 DA:401,10
-DA:402,10
+DA:402,5
 DA:403,5
-DA:404,5
+DA:405,14
 DA:406,14
 DA:407,14
 DA:408,14
@@ -839,16 +910,16 @@ DA:411,14
 DA:412,14
 DA:413,14
 DA:414,14
-DA:415,14
+DA:415,0
 DA:416,0
-DA:417,0
+DA:417,14
 DA:418,14
 DA:419,14
 DA:420,14
-DA:421,14
-DA:422,28
+DA:421,28
+DA:422,14
 DA:423,14
-DA:424,14
+DA:425,11
 DA:426,11
 DA:427,11
 DA:428,11
@@ -858,136 +929,117 @@ DA:431,11
 DA:432,11
 DA:433,11
 DA:434,11
-DA:435,11
+DA:435,0
 DA:436,0
-DA:437,0
+DA:437,11
 DA:438,11
 DA:439,11
 DA:440,11
-DA:441,11
-DA:442,22
+DA:441,22
+DA:442,11
 DA:443,11
-DA:444,11
+DA:445,30
 DA:446,30
 DA:447,30
 DA:448,30
 DA:449,30
 DA:450,30
-DA:451,30
+DA:451,53
 DA:452,53
-DA:453,53
+DA:453,0
 DA:454,0
 DA:455,0
 DA:456,0
 DA:457,0
-DA:458,0
+DA:458,53
 DA:459,53
 DA:460,53
 DA:461,53
 DA:462,53
-DA:463,53
-BRDA:346,95,1,3
-BRDA:346,95,7,45
-BRDA:346,95,8,45
-BRDA:346,95,9,45
-BRDA:346,95,10,45
-BRDA:346,95,11,5
-BRDA:346,95,0,0
-BRDA:346,95,2,0
-BRDA:346,95,3,0
-BRDA:346,95,4,0
-BRDA:346,95,5,0
-BRDA:346,95,6,0
-BRDA:385,1189,1,30
-BRDA:386,409,0,30
-BRDA:387,428,0,30
-BRDA:387,428,1,30
-BRDA:393,492,1,5
-BRDA:400,580,0,0
-BRDA:400,580,1,5
-BRDA:393,492,2,14
-BRDA:411,720,0,0
-BRDA:411,720,1,14
-BRDA:415,785,0,14
-BRDA:415,785,1,0
-BRDA:415,810,0,0
-BRDA:415,810,1,14
-BRDA:393,492,3,11
-BRDA:431,960,0,0
-BRDA:431,960,1,11
-BRDA:435,1023,0,5
-BRDA:435,1023,1,6
-BRDA:435,1040,0,0
-BRDA:435,1040,1,11
-BRDA:393,492,0,30
-BRDA:386,409,1,30
-BRDA:385,1175,0,30
-BRDA:385,1175,1,53
-BRDA:385,1189,0,53
-FN:498,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser::value()
+BRDA:345,95,1,3
+BRDA:345,95,7,45
+BRDA:345,95,8,45
+BRDA:345,95,9,45
+BRDA:345,95,10,45
+BRDA:345,95,11,5
+BRDA:345,95,0,0
+BRDA:345,95,2,0
+BRDA:345,95,3,0
+BRDA:345,95,4,0
+BRDA:345,95,5,0
+BRDA:345,95,6,0
+BRDA:384,1189,1,30
+BRDA:385,409,0,30
+BRDA:386,428,0,30
+BRDA:386,428,1,30
+BRDA:392,492,1,5
+BRDA:399,580,0,0
+BRDA:399,580,1,5
+BRDA:392,492,2,14
+BRDA:410,720,0,0
+BRDA:410,720,1,14
+BRDA:414,785,0,14
+BRDA:414,785,1,0
+BRDA:414,810,0,0
+BRDA:414,810,1,14
+BRDA:392,492,3,11
+BRDA:430,960,0,0
+BRDA:430,960,1,11
+BRDA:434,1023,0,5
+BRDA:434,1023,1,6
+BRDA:434,1040,0,0
+BRDA:434,1040,1,11
+BRDA:392,492,0,30
+BRDA:385,409,1,30
+BRDA:384,1175,0,30
+BRDA:384,1175,1,53
+BRDA:384,1189,0,53
+FN:497,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser::value()
 FNDA:45,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser::value()
+DA:498,45
 DA:499,45
 DA:500,45
 DA:501,45
 DA:502,45
 DA:503,45
 DA:504,45
-DA:505,45
+DA:506,45
 DA:507,45
 DA:508,45
-DA:509,45
-DA:510,90
+DA:509,90
+DA:510,45
 DA:511,45
-DA:512,45
+DA:513,0
 DA:514,0
 DA:515,0
 DA:516,0
 DA:517,0
 DA:518,0
-DA:519,0
-DA:521,45
+DA:520,45
+DA:521,0
 DA:522,0
 DA:523,0
 DA:524,0
 DA:525,0
-DA:526,0
+DA:526,45
 DA:527,45
 DA:528,45
 DA:529,45
 DA:530,45
-DA:531,45
-BRDA:505,79,0,0
-BRDA:505,79,1,45
-BRDA:505,85,1,0
-BRDA:505,85,0,45
-FN:557,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser::roll()
+BRDA:504,79,0,0
+BRDA:504,79,1,45
+BRDA:504,85,1,0
+BRDA:504,85,0,45
+FN:576,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser::roll()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser::roll()
-DA:558,0
-DA:559,0
-DA:560,0
-DA:562,0
-DA:563,0
-DA:564,0
-DA:565,0
-DA:569,0
-DA:570,0
-DA:571,0
-DA:572,0
-DA:573,0
-DA:574,0
-DA:575,0
-DA:576,0
 DA:577,0
 DA:578,0
 DA:579,0
-DA:580,0
 DA:581,0
 DA:582,0
 DA:583,0
 DA:584,0
-DA:585,0
-DA:586,0
-DA:587,0
+DA:588,0
 DA:589,0
 DA:590,0
 DA:591,0
@@ -995,7 +1047,9 @@ DA:592,0
 DA:593,0
 DA:594,0
 DA:595,0
+DA:596,0
 DA:597,0
+DA:598,0
 DA:599,0
 DA:600,0
 DA:601,0
@@ -1007,19 +1061,24 @@ DA:606,0
 DA:607,0
 DA:608,0
 DA:609,0
-BRDA:565,69,0,0
-BRDA:565,69,1,0
-BRDA:574,205,1,0
-BRDA:574,193,0,0
-BRDA:574,193,1,0
-BRDA:574,205,0,0
-BRDA:565,76,1,0
-BRDA:565,76,0,0
-FN:626,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext Engine.Parsers.Generated.Grammar.GrammarParser::modifier()
-FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext Engine.Parsers.Generated.Grammar.GrammarParser::modifier()
-DA:627,0
+DA:610,0
+DA:611,0
+DA:612,0
+DA:613,0
+DA:614,0
+DA:615,0
+DA:617,0
+DA:618,0
+DA:619,0
+DA:620,0
+DA:621,0
+DA:622,0
+DA:623,0
+DA:624,0
+DA:626,0
 DA:628,0
 DA:629,0
+DA:630,0
 DA:631,0
 DA:632,0
 DA:633,0
@@ -1028,97 +1087,89 @@ DA:635,0
 DA:636,0
 DA:637,0
 DA:638,0
-DA:639,0
-DA:640,0
-DA:641,0
-DA:642,0
-DA:643,0
-DA:644,0
-DA:645,0
-DA:646,0
-DA:647,0
-DA:648,0
-DA:649,0
-DA:650,0
-DA:651,0
-DA:652,0
-DA:653,0
-DA:654,0
-BRDA:636,66,0,0
-BRDA:636,66,1,0
-BRDA:636,81,0,0
-BRDA:636,81,1,0
-FN:670,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser::command()
+BRDA:584,69,0,0
+BRDA:584,69,1,0
+BRDA:594,279,1,0
+BRDA:599,168,0,0
+BRDA:599,168,1,0
+BRDA:599,183,0,0
+BRDA:599,183,1,0
+BRDA:594,265,0,0
+BRDA:594,265,1,0
+BRDA:594,279,0,0
+BRDA:584,76,1,0
+BRDA:584,76,0,0
+FN:654,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser::command()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser::command()
+DA:655,0
+DA:656,0
+DA:657,0
+DA:658,0
+DA:659,0
+DA:660,0
+DA:661,0
+DA:662,0
+DA:663,0
+DA:664,0
+DA:665,0
+DA:666,0
+DA:667,0
+DA:668,0
+DA:669,0
+DA:670,0
 DA:671,0
 DA:672,0
 DA:673,0
-DA:674,0
-DA:675,0
-DA:676,0
-DA:677,0
-DA:678,0
-DA:679,0
-DA:680,0
-DA:681,0
-DA:682,0
-DA:683,0
-DA:684,0
-DA:685,0
-DA:686,0
-DA:687,0
-DA:688,0
-DA:689,0
-FN:705,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser::action()
+FN:689,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser::action()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser::action()
+DA:690,0
+DA:691,0
+DA:692,0
+DA:693,0
+DA:694,0
+DA:695,0
+DA:696,0
+DA:697,0
+DA:698,0
+DA:699,0
+DA:700,0
+DA:701,0
+DA:702,0
+DA:703,0
+DA:704,0
+DA:705,0
 DA:706,0
 DA:707,0
 DA:708,0
-DA:709,0
+FN:709,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
+FNDA:0,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
 DA:710,0
 DA:711,0
 DA:712,0
-DA:713,0
 DA:714,0
 DA:715,0
+BRDA:711,5,1,0
+BRDA:711,5,0,0
+FN:715,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::expression_sempred(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,System.Int32)
+FNDA:0,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::expression_sempred(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,System.Int32)
 DA:716,0
 DA:717,0
 DA:718,0
 DA:719,0
 DA:720,0
-DA:721,0
 DA:722,0
 DA:723,0
-DA:724,0
-FN:725,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
-FNDA:0,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::Sempred(Antlr4.Runtime.RuleContext,System.Int32,System.Int32)
-DA:726,0
-DA:727,0
-DA:728,0
-DA:730,0
-DA:731,0
-BRDA:727,5,1,0
-BRDA:727,5,0,0
-FN:731,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::expression_sempred(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,System.Int32)
-FNDA:0,System.Boolean Engine.Parsers.Generated.Grammar.GrammarParser::expression_sempred(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext,System.Int32)
-DA:732,0
-DA:733,0
-DA:734,0
-DA:735,0
-DA:736,0
-DA:738,0
-DA:739,0
-BRDA:733,4,1,0
-BRDA:733,4,2,0
-BRDA:733,4,3,0
-BRDA:733,4,0,0
+BRDA:717,4,1,0
+BRDA:717,4,2,0
+BRDA:717,4,3,0
+BRDA:717,4,0,0
 FN:37,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.cctor()
 FNDA:1,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.cctor()
 DA:38,1
 DA:46,1
 DA:47,1
 DA:48,1
-DA:49,1
+DA:50,1
 DA:51,1
 DA:52,1
 DA:53,1
@@ -1128,13 +1179,28 @@ DA:56,1
 DA:57,1
 DA:58,1
 DA:59,1
-DA:60,1
+DA:76,1
 DA:77,1
-DA:78,1
-DA:79,26
+DA:78,26
+DA:79,8
 DA:80,8
-DA:81,8
-DA:82,1
+DA:81,1
+DA:725,1
+DA:726,1
+DA:727,1
+DA:728,1
+DA:729,1
+DA:730,1
+DA:731,1
+DA:732,1
+DA:733,1
+DA:734,1
+DA:735,1
+DA:736,1
+DA:737,1
+DA:738,1
+DA:739,1
+DA:740,1
 DA:741,1
 DA:742,1
 DA:743,1
@@ -1185,420 +1251,414 @@ DA:787,1
 DA:788,1
 DA:789,1
 DA:790,1
-DA:791,1
 DA:792,1
 DA:793,1
-DA:794,1
-DA:795,1
-DA:796,1
-DA:797,1
-DA:798,1
-DA:799,1
-DA:800,1
-DA:801,1
-DA:802,1
-DA:803,1
-DA:804,1
-DA:805,1
-DA:806,1
-DA:807,1
-DA:808,1
-DA:810,1
-DA:811,1
-BRDA:79,508,1,8
-BRDA:79,508,0,1
-FN:83,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream)
+BRDA:78,500,1,8
+BRDA:78,500,0,1
+FN:82,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream)
 FNDA:45,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream)
-DA:84,45
-FN:86,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream,System.IO.TextWriter,System.IO.TextWriter)
+DA:83,45
+FN:85,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream,System.IO.TextWriter,System.IO.TextWriter)
 FNDA:15,System.Void Engine.Parsers.Generated.Grammar.GrammarParser::.ctor(Antlr4.Runtime.ITokenStream,System.IO.TextWriter,System.IO.TextWriter)
+DA:86,15
 DA:87,15
 DA:88,15
 DA:89,15
-DA:90,15
-FN:92,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement()
+FN:91,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement()
 FNDA:15,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement()
+DA:92,15
 DA:93,15
 DA:94,15
-DA:95,15
-FN:95,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement(System.Int32)
+FN:94,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement(System.Int32)
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::statement(System.Int32)
+DA:95,0
 DA:96,0
 DA:97,0
-DA:98,0
-FN:98,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Eof()
+FN:97,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Eof()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Eof()
-DA:99,0
-FN:99,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND()
+DA:98,0
+FN:98,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND()
-DA:100,0
-FN:100,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND(System.Int32)
+DA:99,0
+FN:99,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND(System.Int32)
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::AND(System.Int32)
+DA:100,0
 DA:101,0
 DA:102,0
-DA:103,0
-FN:107,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::get_RuleIndex()
+FN:106,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::get_RuleIndex()
-DA:108,0
-FN:108,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:107,0
+FN:107,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:15,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:108,15
 DA:109,15
-DA:110,15
-DA:111,30
-DA:112,0
-DA:113,15
-BRDA:111,14,0,15
-BRDA:111,14,1,0
-FN:104,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:110,30
+DA:111,0
+DA:112,15
+BRDA:110,14,0,15
+BRDA:110,14,1,0
+FN:103,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:15,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementsContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:104,15
 DA:105,15
 DA:106,15
-DA:107,15
-FN:153,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::expression()
+FN:152,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::expression()
 FNDA:15,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::expression()
+DA:153,15
 DA:154,15
 DA:155,15
-DA:156,15
-FN:156,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::command()
+FN:155,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::command()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::command()
+DA:156,0
 DA:157,0
 DA:158,0
-DA:159,0
-FN:159,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::action()
+FN:158,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::action()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::action()
+DA:159,0
 DA:160,0
 DA:161,0
-DA:162,0
-FN:166,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::get_RuleIndex()
+FN:165,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::get_RuleIndex()
-DA:167,0
-FN:167,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:166,0
+FN:166,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:167,0
 DA:168,0
 DA:169,0
 DA:170,0
 DA:171,0
-DA:172,0
-BRDA:170,14,0,0
-BRDA:170,14,1,0
-FN:163,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+BRDA:169,14,0,0
+BRDA:169,14,1,0
+FN:162,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:15,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/StatementContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:163,15
 DA:164,15
 DA:165,15
-DA:166,15
-FN:225,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::get_RuleIndex()
+FN:224,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::get_RuleIndex()
-DA:226,0
-FN:228,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+DA:225,0
+FN:227,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:83,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+DA:228,83
 DA:229,83
 DA:230,83
-DA:231,83
-FN:222,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+FN:221,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:83,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:222,83
 DA:223,83
 DA:224,83
-DA:225,83
-FN:227,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor()
+FN:226,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor()
 FNDA:249,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext::.ctor()
-DA:228,249
-FN:233,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::value()
+DA:227,249
+FN:232,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::value()
 FNDA:45,Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::value()
+DA:233,45
 DA:234,45
 DA:235,45
-DA:236,45
-FN:237,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+FN:236,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:3,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:237,3
 DA:238,3
-DA:239,3
-DA:240,6
-DA:241,0
-DA:242,3
-BRDA:240,14,0,3
-BRDA:240,14,1,0
-FN:236,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+DA:239,6
+DA:240,0
+DA:241,3
+BRDA:239,14,0,3
+BRDA:239,14,1,0
+FN:235,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:180,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:237,180
-FN:244,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::SUBTRACT()
+DA:236,180
+FN:243,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::SUBTRACT()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::SUBTRACT()
-DA:245,0
-FN:245,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::expression()
+DA:244,0
+FN:244,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::expression()
 FNDA:3,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::expression()
+DA:245,3
 DA:246,3
 DA:247,3
-DA:248,3
-FN:249,TResult Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+FN:248,TResult Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:249,0
 DA:250,0
 DA:251,0
 DA:252,0
 DA:253,0
-DA:254,0
-BRDA:252,14,0,0
-BRDA:252,14,1,0
-FN:248,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+BRDA:251,14,0,0
+BRDA:251,14,1,0
+FN:247,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:12,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/UnaryMinusExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:249,12
-FN:259,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression()
+DA:248,12
+FN:258,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression()
+DA:259,0
 DA:260,0
 DA:261,0
-DA:262,0
-FN:262,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression(System.Int32)
+FN:261,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression(System.Int32)
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::expression(System.Int32)
+DA:262,0
 DA:263,0
 DA:264,0
-DA:265,0
-FN:265,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MULTIPLY()
+FN:264,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MULTIPLY()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MULTIPLY()
-DA:266,0
-FN:266,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::DIVIDE()
+DA:265,0
+FN:265,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::DIVIDE()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::DIVIDE()
-DA:267,0
-FN:267,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MOD()
+DA:266,0
+FN:266,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MOD()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::MOD()
-DA:268,0
-FN:269,TResult Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:267,0
+FN:268,TResult Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:269,0
 DA:270,0
 DA:271,0
 DA:272,0
 DA:273,0
-DA:274,0
-BRDA:272,14,0,0
-BRDA:272,14,1,0
-FN:268,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+BRDA:271,14,0,0
+BRDA:271,14,1,0
+FN:267,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:56,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/MultiplicationExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:269,56
-FN:279,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression()
+DA:268,56
+FN:278,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression()
+DA:279,0
 DA:280,0
 DA:281,0
-DA:282,0
-FN:282,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression(System.Int32)
+FN:281,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression(System.Int32)
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::expression(System.Int32)
+DA:282,0
 DA:283,0
 DA:284,0
-DA:285,0
-FN:285,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::ADD()
+FN:284,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::ADD()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::ADD()
-DA:286,0
-FN:286,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::SUBTRACT()
+DA:285,0
+FN:285,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::SUBTRACT()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::SUBTRACT()
-DA:287,0
-FN:288,TResult Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:286,0
+FN:287,TResult Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:288,0
 DA:289,0
 DA:290,0
 DA:291,0
 DA:292,0
-DA:293,0
-BRDA:291,14,0,0
-BRDA:291,14,1,0
-FN:287,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+BRDA:290,14,0,0
+BRDA:290,14,1,0
+FN:286,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:44,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/AdditiveExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:288,44
-FN:298,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression()
+DA:287,44
+FN:297,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext[] Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression()
+DA:298,0
 DA:299,0
 DA:300,0
-DA:301,0
-FN:301,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression(System.Int32)
+FN:300,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression(System.Int32)
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::expression(System.Int32)
+DA:301,0
 DA:302,0
 DA:303,0
-DA:304,0
-FN:304,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::POW()
+FN:303,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::POW()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::POW()
-DA:305,0
-FN:306,TResult Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:304,0
+FN:305,TResult Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:306,0
 DA:307,0
 DA:308,0
 DA:309,0
 DA:310,0
-DA:311,0
-BRDA:309,14,0,0
-BRDA:309,14,1,0
-FN:305,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+BRDA:308,14,0,0
+BRDA:308,14,1,0
+FN:304,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:20,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/PowExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:306,20
-FN:313,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::L_PAREN()
+DA:305,20
+FN:312,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::L_PAREN()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::L_PAREN()
-DA:314,0
-FN:314,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::expression()
+DA:313,0
+FN:313,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::expression()
 FNDA:5,Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::expression()
+DA:314,5
 DA:315,5
 DA:316,5
-DA:317,5
-FN:317,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::R_PAREN()
+FN:316,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::R_PAREN()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::R_PAREN()
-DA:318,0
-FN:319,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:317,0
+FN:318,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:319,0
 DA:320,0
 DA:321,0
 DA:322,0
 DA:323,0
-DA:324,0
-BRDA:322,14,0,0
-BRDA:322,14,1,0
-FN:318,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
+BRDA:321,14,0,0
+BRDA:321,14,1,0
+FN:317,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
 FNDA:20,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ParenExprContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ExpressionContext)
-DA:319,20
-FN:469,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::get_RuleIndex()
+DA:318,20
+FN:468,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::get_RuleIndex()
-DA:470,0
-FN:472,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+DA:469,0
+FN:471,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
 FNDA:45,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+DA:472,45
 DA:473,45
 DA:474,45
-DA:475,45
-FN:466,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+FN:465,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:45,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:466,45
 DA:467,45
 DA:468,45
-DA:469,45
-FN:471,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor()
+FN:470,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor()
 FNDA:135,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext::.ctor()
-DA:472,135
-FN:477,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::roll()
+DA:471,135
+FN:476,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::roll()
 FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/RollContext Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::roll()
+DA:477,0
 DA:478,0
 DA:479,0
-DA:480,0
-FN:481,TResult Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+FN:480,TResult Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:481,0
 DA:482,0
 DA:483,0
 DA:484,0
 DA:485,0
-DA:486,0
-BRDA:484,14,0,0
-BRDA:484,14,1,0
-FN:480,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+BRDA:483,14,0,0
+BRDA:483,14,1,0
+FN:479,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
 FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
-DA:481,0
-FN:488,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::INTEGER()
+DA:480,0
+FN:487,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::INTEGER()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::INTEGER()
-DA:489,0
-FN:490,TResult Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:488,0
+FN:489,TResult Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:490,0
 DA:491,0
 DA:492,0
 DA:493,0
 DA:494,0
-DA:495,0
-BRDA:493,14,0,0
-BRDA:493,14,1,0
-FN:489,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
+BRDA:492,14,0,0
+BRDA:492,14,1,0
+FN:488,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
 FNDA:180,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/NumberValueContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/ValueContext)
-DA:490,180
-FN:533,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::DICE()
-FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::DICE()
-DA:534,0
-FN:534,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::INTEGER()
-FNDA:0,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::INTEGER()
-DA:535,0
-FN:535,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::INTEGER(System.Int32)
-FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::INTEGER(System.Int32)
-DA:536,0
+DA:489,180
+FN:536,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::get_RuleIndex()
+FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::get_RuleIndex()
 DA:537,0
-DA:538,0
-FN:538,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext[] Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::modifier()
-FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext[] Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::modifier()
-DA:539,0
+FN:539,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::CopyFrom(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
 DA:540,0
 DA:541,0
-FN:541,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::modifier(System.Int32)
-FNDA:0,Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::modifier(System.Int32)
 DA:542,0
-DA:543,0
-DA:544,0
-FN:548,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::get_RuleIndex()
-FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::get_RuleIndex()
+FN:533,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:534,0
+DA:535,0
+DA:536,0
+FN:538,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor()
+FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor()
+DA:539,0
+FN:544,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::INTEGER()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::INTEGER()
+DA:545,0
+FN:545,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::INTEGER(System.Int32)
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::INTEGER(System.Int32)
+DA:546,0
+DA:547,0
+DA:548,0
+FN:548,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::DICE()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::DICE()
 DA:549,0
-FN:549,TResult Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-DA:550,0
+FN:550,TResult Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 DA:551,0
 DA:552,0
 DA:553,0
 DA:554,0
-BRDA:552,14,0,0
-BRDA:552,14,1,0
-FN:545,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/RollContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-DA:546,0
-DA:547,0
-DA:548,0
-FN:611,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::ADVANTAGE()
-FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::ADVANTAGE()
-DA:612,0
-FN:612,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::DISADVANTAGE()
-FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::DISADVANTAGE()
-DA:613,0
-FN:617,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::get_RuleIndex()
-FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::get_RuleIndex()
-DA:618,0
-FN:618,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-DA:619,0
-DA:620,0
-DA:621,0
-DA:622,0
-DA:623,0
-BRDA:621,14,0,0
-BRDA:621,14,1,0
-FN:614,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ModifierContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-DA:615,0
-DA:616,0
-DA:617,0
-FN:656,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::COMMAND()
+DA:555,0
+BRDA:553,14,0,0
+BRDA:553,14,1,0
+FN:549,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/SumRollContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+DA:550,0
+FN:557,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DICE()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DICE()
+DA:558,0
+FN:558,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::INTEGER()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::INTEGER()
+DA:559,0
+FN:559,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::ADVANTAGE()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::ADVANTAGE()
+DA:560,0
+FN:560,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::ADVANTAGE(System.Int32)
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::ADVANTAGE(System.Int32)
+DA:561,0
+DA:562,0
+DA:563,0
+FN:563,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DISADVANTAGE()
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode[] Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DISADVANTAGE()
+DA:564,0
+FN:564,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DISADVANTAGE(System.Int32)
+FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::DISADVANTAGE(System.Int32)
+DA:565,0
+DA:566,0
+DA:567,0
+FN:568,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:569,0
+DA:570,0
+DA:571,0
+DA:572,0
+DA:573,0
+BRDA:571,14,0,0
+BRDA:571,14,1,0
+FN:567,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ModifierRollContext::.ctor(Engine.Parsers.Generated.Grammar.GrammarParser/RollContext)
+DA:568,0
+FN:640,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::COMMAND()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::COMMAND()
-DA:657,0
-FN:661,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::get_RuleIndex()
+DA:641,0
+FN:645,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::get_RuleIndex()
-DA:662,0
-FN:662,TResult Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:646,0
+FN:646,TResult Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-DA:663,0
-DA:664,0
-DA:665,0
-DA:666,0
-DA:667,0
-BRDA:665,14,0,0
-BRDA:665,14,1,0
-FN:658,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:647,0
+DA:648,0
+DA:649,0
+DA:650,0
+DA:651,0
+BRDA:649,14,0,0
+BRDA:649,14,1,0
+FN:642,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/CommandContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-DA:659,0
-DA:660,0
-DA:661,0
-FN:691,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::ACTION()
+DA:643,0
+DA:644,0
+DA:645,0
+FN:675,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::ACTION()
 FNDA:0,Antlr4.Runtime.Tree.ITerminalNode Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::ACTION()
-DA:692,0
-FN:696,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::get_RuleIndex()
+DA:676,0
+FN:680,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::get_RuleIndex()
 FNDA:0,System.Int32 Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::get_RuleIndex()
-DA:697,0
-FN:697,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
+DA:681,0
+FN:681,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
 FNDA:0,TResult Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::Accept(Antlr4.Runtime.Tree.IParseTreeVisitor`1<TResult>)
-DA:698,0
-DA:699,0
-DA:700,0
-DA:701,0
-DA:702,0
-BRDA:700,14,0,0
-BRDA:700,14,1,0
-FN:693,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
+DA:682,0
+DA:683,0
+DA:684,0
+DA:685,0
+DA:686,0
+BRDA:684,14,0,0
+BRDA:684,14,1,0
+FN:677,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
 FNDA:0,System.Void Engine.Parsers.Generated.Grammar.GrammarParser/ActionContext::.ctor(Antlr4.Runtime.ParserRuleContext,System.Int32)
-DA:694,0
-DA:695,0
-DA:696,0
-LF:635
-LH:309
+DA:678,0
+DA:679,0
+DA:680,0
+LF:619
+LH:306
 BRF:102
 BRH:37
-FNF:97
+FNF:100
 FNH:29
 end_of_record
