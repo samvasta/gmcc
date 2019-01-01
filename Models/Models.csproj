@@ -9,4 +9,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Resources\Icons\skull.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Icons\skull.png"/>
+  </ItemGroup>
+
 </Project>
