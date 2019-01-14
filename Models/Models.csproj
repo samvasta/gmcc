@@ -10,10 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Resources\Icons\skull.png"/>
+    <Content Remove="Resources\Icons\skull.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Icons\skull.png"/>
+    <EmbeddedResource Include="Resources\Icons\skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.XmlSerializer.Generator" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

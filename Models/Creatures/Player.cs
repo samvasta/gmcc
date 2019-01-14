@@ -3,7 +3,6 @@ using Avalonia.Media.Imaging;
 using Common.Interfaces;
 using Common.Models;
 using Models.Utils;
-using Models.RuleSet;
 using Models.Attributes;
 
 namespace Models.Creatures
@@ -40,6 +39,11 @@ namespace Models.Creatures
             {
                 Set(ref _statusEffects, value);
             }
+        }
+
+        public int GetAttributeValue(ICreatureAttribute attribute)
+        {
+            return 0;
         }
     }
 }

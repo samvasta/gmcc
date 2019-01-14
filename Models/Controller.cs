@@ -3,7 +3,6 @@ using Common.Interfaces;
 using Common.Models;
 using Models.Encounters;
 using Models.Utils;
-using Models.RuleSet;
 using Models.Attributes;
 
 namespace Models

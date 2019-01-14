@@ -1,7 +1,6 @@
 using System;
 using Common.Interfaces;
 using Common.Models;
-using Models.RuleSet;
 
 namespace Models.Creatures
 {

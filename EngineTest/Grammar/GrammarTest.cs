@@ -10,19 +10,24 @@ using Engine.Parsers.Grammar;
 using Engine.Parsers.Grammar.Visitors;
 using Engine.Parsers.Generated.Grammar;
 using System.Diagnostics;
+using Common.Models;
 
-namespace EngineTest
+namespace EngineTest.Grammar
 {
     public class ParserTest
     {
-        private GrammarParser Setup(string text)
+        private GrammarParseResult Parse(string text)
         {
             AntlrInputStream inputStream = new AntlrInputStream(text);
             GrammarLexer grammarLexer = new GrammarLexer(inputStream);
             CommonTokenStream commonTokenStream = new CommonTokenStream(grammarLexer);
             GrammarParser grammarParser = new GrammarParser(commonTokenStream);
     
-            return grammarParser;
+            GrammarParser.StatementsContext context = grammarParser.statements();
+            StatementsVisitor visitor = new StatementsVisitor(new TestRuleSet());
+            GrammarParseResult result = visitor.Visit(context);
+            
+            return result;
         }
         
         [Theory]
@@ -43,11 +48,7 @@ namespace EngineTest
         [InlineData("-10/(20/2^2*5/5)*8-2", -18)]
         public void TestArithmetic(string text, int expectedValue)
         {
-            GrammarParser parser = Setup(text);
-    
-            GrammarParser.StatementsContext context = parser.statements();
-            StatementsVisitor visitor = new StatementsVisitor();
-            GrammarParseResult result = visitor.Visit(context);
+            GrammarParseResult result = Parse(text);
     
             Assert.True(result.IsSuccessful);
             Console.WriteLine(result.Output);
@@ -56,6 +57,8 @@ namespace EngineTest
         
 
         [Theory]
+        [InlineData("10d1", 10, 10)]
+        [InlineData("10d1 - 4d1 + 3d1", 9, 9)]
         [InlineData("d20", 1, 20)]
         [InlineData("4d20", 4, 80)]
         [InlineData("!d20", 1, 20)]
@@ -63,11 +66,7 @@ namespace EngineTest
         [InlineData("~!!~!~~!!d20", 1, 20)]
         public void TestRoll(string text, int expectedLow, int expectedHigh)
         {
-            GrammarParser parser = Setup(text);
-    
-            GrammarParser.StatementsContext context = parser.statements();
-            StatementsVisitor visitor = new StatementsVisitor();
-            GrammarParseResult result = visitor.Visit(context);
+            GrammarParseResult result = Parse(text);
     
             //Just test it once. These tests are mainly to make sure it parses correctly
             Assert.True(result.IsSuccessful);
@@ -85,11 +84,7 @@ namespace EngineTest
         [InlineData("(2+2d4)d5 + 18")]
         public void TestComplexExpression(string text)
         {
-            GrammarParser parser = Setup(text);
-    
-            GrammarParser.StatementsContext context = parser.statements();
-            StatementsVisitor visitor = new StatementsVisitor();
-            GrammarParseResult result = visitor.Visit(context);
+            GrammarParseResult result = Parse(text);
     
             //Just test it once. These tests are mainly to make sure it parses correctly
             Assert.True(result.IsSuccessful);
@@ -103,11 +98,7 @@ namespace EngineTest
         [InlineData("5d5+23/3:test & 53-22 & 21", 3)]
         public void TestMultiStatement(string text, int expectedStatements)
         {
-            GrammarParser parser = Setup(text);
-    
-            GrammarParser.StatementsContext context = parser.statements();
-            StatementsVisitor visitor = new StatementsVisitor();
-            GrammarParseResult result = visitor.Visit(context);
+            GrammarParseResult result = Parse(text);
     
             Assert.True(result.IsSuccessful);
             Assert.Equal(expectedStatements, result.Children.Count);
@@ -120,11 +111,7 @@ namespace EngineTest
         {
             string label = "This is a label";
             string text = $"5d10 + 2 : {label}";
-            GrammarParser parser = Setup(text);
-    
-            GrammarParser.StatementsContext context = parser.statements();
-            StatementsVisitor visitor = new StatementsVisitor();
-            GrammarParseResult result = visitor.Visit(context);
+            GrammarParseResult result = Parse(text);
     
             Assert.True(result.IsSuccessful);
             Assert.Equal(label, result.Label);

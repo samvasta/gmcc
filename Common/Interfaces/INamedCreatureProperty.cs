@@ -1,4 +1,4 @@
-namespace Models.RuleSet
+namespace Common.Interfaces
 {
     public interface INamedCreatureProperty
     {

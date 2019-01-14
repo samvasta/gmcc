@@ -1,7 +1,6 @@
 using Common.Enums;
-using Models.RuleSet;
 
-namespace Models.Attributes
+namespace Common.Interfaces
 {
     public interface ICreatureAttribute : INamedCreatureProperty
     {

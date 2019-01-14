@@ -108,7 +108,7 @@ namespace Models.Creatures
             CreatureAction action = CreatureActions.SingleOrDefault(x => x.Name.Equals(name));
             if(action != null)
             {
-                return Engine.Parsers.ParserHelper.Evaluate(action.ActionText);
+                return Engine.Parsers.ParserHelper.Evaluate(action.ActionText, Controller.Instance.CurrentRuleSet);
             }
 
             GrammarParseResult result = new GrammarParseResult($"{EntityName}'s default {name}");

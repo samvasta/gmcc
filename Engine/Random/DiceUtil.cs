@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Common.Models;
 using MathNet.Numerics.Random;
 
@@ -46,14 +47,16 @@ namespace Engine.Random
             for(int i = 1; i < Math.Abs(advantage) + 1; i++)
             {
                 DiceResult value = RollOne(diceSides);
-                if(advantage < 0)
-                {
-                    best = DiceResult.MinTotal(best, value);
-                }
-                else
-                {
-                    best = DiceResult.MaxTotal(best, value);
-                }
+                best.Values.Add(value);
+            }
+
+            if(advantage < 0)
+            {
+                best.Total = best.Values.Min();
+            }
+            else
+            {
+                best.Total = best.Values.Max();
             }
 
             return best;

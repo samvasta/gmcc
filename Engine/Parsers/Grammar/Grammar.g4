@@ -26,8 +26,14 @@ expression                                      : SUBTRACT expression           
                                                 |<assoc=right> lhs=expression op=POW rhs=expression                 #powExpr
                                                 | lhs=expression op=(MULTIPLY | DIVIDE | MOD) rhs=expression        #multiplicationExpr
                                                 | lhs=expression op=(PLUS | SUBTRACT) rhs=expression                #additiveExpr
+                                                | test=expression L_BRACE goal=expression COLON outcome=expression R_BRACE  #turnaryExpr
                                                 | L_PAREN expression R_PAREN                                        #parenExpr
+                                                | skill=WORD L_PAREN creature=WORD (COMMA creature=WORD)* R_PAREN   #invokeSkillExpr
+                                                | creature=WORD DOT action=WORD L_PAREN args=exprArgs? R_PAREN      #invokeActionExpr
                                                 | INTEGER                                                           #numberExpr
+                                                ;
+
+exprArgs                                        : expression (COMMA expression)*
                                                 ;
 
 command                                         : 'help'                                                            #helpCmd
@@ -45,8 +51,6 @@ action                                          : NEW creature=WORD             
                                                 | SET creature=WORD counter=WORD? expression                        #setCreatureAct
                                                 | ADD creature=WORD COMMA? status=WORD                              #addStatusAct
                                                 | REMOVE creature=WORD COMMA? status=WORD                           #remStatusAct
-                                                | skill=WORD L_PAREN creature=WORD (COMMA creature=WORD)* R_PAREN   #invokeSkillAct
-                                                | creature=WORD DOT action=WORD                                     #invokeActionAct
                                                 | RESET creature=WORD DOT action=WORD                               #resetSkillAct
 
                                                 | NEXT TRACK                                                        #nextTrackAct
@@ -109,6 +113,8 @@ DISADVANTAGE                                    : '~' ;
 
 L_PAREN                                         : '(' ;
 R_PAREN                                         : ')' ;
+L_BRACE                                         : '[' ;
+R_BRACE                                         : ']' ;
 
 COLON                                           : ':' ;
 COMMA                                           : ',' ;

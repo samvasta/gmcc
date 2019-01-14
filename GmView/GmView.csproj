@@ -12,11 +12,23 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Styles\Button.xaml" />
+    <None Remove="Styles\Theme.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Avalonia.Desktop" Version="0.7.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\Engine\Engine.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Styles\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Styles\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

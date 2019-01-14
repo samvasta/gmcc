@@ -1,5 +1,15 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="GmView">
-    Hello World!
+    <StackPanel>
+        <DockPanel>
+            <Button Content="GO!" Command="{Binding Path=Cmd_ExecuteCommandText}" DockPanel.Dock="Right"/>
+            <TextBox Text="{Binding Path=CmdText}" DockPanel.Dock="Left"/>
+        </DockPanel>
+        <TextBlock Text="{Binding Path=Result.RawText}"/>
+        <TextBlock Text="{Binding Path=Result.Label}"/>
+        <TextBlock Text="{Binding Path=Result.EvaluatedText}"/>
+        <TextBlock Text="{Binding Path=Result.Value}"/>
+        <TextBlock Text="{Binding Path=Result.Output}"/>
+    </StackPanel>
 </Window>

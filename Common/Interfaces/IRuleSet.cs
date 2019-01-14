@@ -1,9 +1,7 @@
 using System;
 using System.Collections.Generic;
-using Models.Attributes;
-using Models.Creatures;
 
-namespace Models.RuleSet
+namespace Common.Interfaces
 {
     public interface IRuleSet
     {

@@ -1,8 +1,7 @@
 using System;
 using Avalonia.Media.Imaging;
-using Models.Creatures;
 
-namespace Models.RuleSet
+namespace Common.Interfaces
 {
     public interface IStatusEffect : INamedCreatureProperty
     {

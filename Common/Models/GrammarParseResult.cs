@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Engine.Parsers.Grammar
+namespace Common.Models
 {
     public class GrammarParseResult
     {

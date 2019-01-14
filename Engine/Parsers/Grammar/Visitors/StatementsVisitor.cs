@@ -5,15 +5,24 @@ using Antlr4.Runtime;
 using Antlr4.Runtime.Atn;
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
+using Common.Interfaces;
 using Engine.Parsers.Generated.Grammar;
 using static Engine.Parsers.Generated.Grammar.GrammarParser;
-using static Engine.Parsers.Grammar.GrammarParseResult;
+using static Common.Models.GrammarParseResult;
+using Common.Models;
 
 namespace Engine.Parsers.Grammar.Visitors
 {
     public class StatementsVisitor : GrammarBaseVisitor<GrammarParseResult>
     {
         protected readonly ExpressionVisitor _expressionVisitor = new ExpressionVisitor();
+
+        protected readonly IRuleSet _ruleSet;
+
+        public StatementsVisitor(IRuleSet ruleSet)
+        {
+            _ruleSet = ruleSet;
+        }
 
         public override GrammarParseResult VisitStatements(StatementsContext context)
         {
@@ -52,25 +61,37 @@ namespace Engine.Parsers.Grammar.Visitors
             string labelStr = context.label()?.STRING()?.GetText();
 
             //Successful if any of the 3 possible productions are successful
-            GrammarParseResult result = _expressionVisitor.VisitExpression(context.expression());
-            if(result.IsSuccessful)
+            var expression = context.expression();
+            if(expression != null)
             {
-                result.Label = labelStr;
-                return result;
+                GrammarParseResult result = _expressionVisitor.VisitExpression(expression);
+                if(result.IsSuccessful)
+                {
+                    result.Label = labelStr;
+                    return result;
+                }
             }
             
-            result = VisitCommand(context.command());
-            if(result.IsSuccessful)
+            var command = context.command();
+            if(command != null)
             {
-                result.Label = labelStr;
-                return result;
+                GrammarParseResult result = VisitCommand(command);
+                if(result.IsSuccessful)
+                {
+                    result.Label = labelStr;
+                    return result;
+                }
             }
             
-            result = VisitAction(context.action());
-            if(result.IsSuccessful)
+            var action = context.action();
+            if(action != null)
             {
-                result.Label = labelStr;
-                return result;
+                GrammarParseResult result = VisitAction(action);
+                if(result.IsSuccessful)
+                {
+                    result.Label = labelStr;
+                    return result;
+                }
             }
 
             return GrammarParseResult.Unsuccessful(context.GetText());

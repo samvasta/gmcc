@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Common.Interfaces;
 using System.IO;
 using System.Reflection;
-using Models.RuleSet;
 
 namespace Models.Utils
 {
@@ -17,7 +16,7 @@ namespace Models.Utils
         {
             if(forceReload)
             {
-                _cachedRuleSets.Clear();
+                _cachedRuleSets?.Clear();
                 _cachedRuleSets = null;
             }
 

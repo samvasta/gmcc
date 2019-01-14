@@ -9,7 +9,8 @@ using Common.Models;
 using Engine.Parsers.Generated.Grammar;
 using Engine.Random;
 using static Engine.Parsers.Generated.Grammar.GrammarParser;
-using static Engine.Parsers.Grammar.GrammarParseResult;
+using static Common.Models.GrammarParseResult;
+using Common.Models;
 
 namespace Engine.Parsers.Grammar.Visitors
 {
@@ -17,11 +18,11 @@ namespace Engine.Parsers.Grammar.Visitors
     {
         public virtual GrammarParseResult VisitExpression(ExpressionContext context)
         {
-            Debug.WriteLine($"Determining Type of expression \"{context.GetText()}\"");
             if(context == null)
             {
-                return GrammarParseResult.Unsuccessful(context.GetText());
+                return GrammarParseResult.Unsuccessful(String.Empty);
             }
+            Debug.WriteLine($"Determining Type of expression \"{context.GetText()}\"");
             if(context is ParenExprContext parenExprContext)
             {
                 return VisitExpression(parenExprContext.expression());

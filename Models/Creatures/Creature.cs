@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Avalonia.Media.Imaging;
+using Common.Enums;
 using Common.Interfaces;
 using Common.Models;
 using Engine.Parsers.Grammar;
-using Models.RuleSet;
 using Models.Attributes;
 
 namespace Models.Creatures
@@ -134,9 +134,10 @@ namespace Models.Creatures
             CreatureAction action = Prototype.CreatureActions.SingleOrDefault(x => x.Name.Equals(name));
             if(action != null)
             {
-                return Engine.Parsers.ParserHelper.Evaluate(action.ActionText);
+                return Engine.Parsers.ParserHelper.Evaluate(action.ActionText, Controller.Instance.CurrentRuleSet);
             }
 
+            //Assume it's an attribute if it's not an action
             GrammarParseResult result = new GrammarParseResult($"{IndividualName}'s ({Prototype.EntityName}) {name}");
 
             //Check Abilities
@@ -180,6 +181,28 @@ namespace Models.Creatures
             result.Value = 0;
             result.Output = $"Creatures of type \"{Prototype.EntityName}\" do not have an action or attribute with name \"{name}\"";
             return result;
+        }
+
+        public int GetAttributeValue(Common.Interfaces.ICreatureAttribute attribute)
+        {
+            if(attribute.AttributeKind == AttributeKind.Ability)
+            {
+                return AbilityScores[(AbilityAttr)attribute];
+            }
+            if(attribute.AttributeKind == AttributeKind.AbilitySkill)
+            {
+                return AbilitySkillScores[(AbilitySkillAttr)attribute];
+            }
+            if(attribute.AttributeKind == AttributeKind.Counter)
+            {
+                return CounterValues[(CounterAttr)attribute];
+            }
+            if(attribute.AttributeKind == AttributeKind.Other)
+            {
+                return OtherScores[(OtherAttr)attribute];
+            }
+
+            throw new ArgumentException($"No logic defined in {nameof(GetAttributeValue)} for this kind of attribute");
         }
     }
 }

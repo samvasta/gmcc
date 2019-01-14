@@ -7,7 +7,8 @@ using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using Engine.Parsers.Generated.Grammar;
 using static Engine.Parsers.Generated.Grammar.GrammarParser;
-using static Engine.Parsers.Grammar.GrammarParseResult;
+using static Common.Models.GrammarParseResult;
+using Common.Models;
 
 namespace Engine.Parsers.Grammar.Visitors
 {
